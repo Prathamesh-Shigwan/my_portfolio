@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Blackmagic Videohub Controller | Prathamesh Shigwan</title>
+    <meta name="description" content="A Python desktop application for controlling Blackmagic Videohub routing equipment over the network." />
+    <meta name="theme-color" content="#0c1015" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Link previews (WhatsApp, LinkedIn, X) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Prathamesh Shigwan" />
+    <meta property="og:title" content="Blackmagic Videohub Controller | Prathamesh Shigwan" />
+    <meta property="og:description" content="A Python desktop application for controlling Blackmagic Videohub routing equipment over the network." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blackmagic Videohub Controller | Prathamesh Shigwan" />
+    <meta name="twitter:description" content="A Python desktop application for controlling Blackmagic Videohub routing equipment over the network." />
+    <!-- Turned on once the site is live: see README.md, "When the site is live". -->
+    <!--SITE-URL <link rel="canonical" href="https://example.com/projects/videohub-controller.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:url" content="https://example.com/projects/videohub-controller.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:width" content="1200" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:height" content="630" /> SITE-URL-->
+    <!--SITE-URL <meta name="twitter:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+
+    <link rel="icon" href="../images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <link rel="preload" href="../fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/ibm-plex-sans-condensed-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="../js/config.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="container header-bar">
+        <a class="brand" href="../index.html">
+          <span class="monogram" aria-hidden="true">PS<span class="monogram-dot"></span></span>
+          <span class="brand-name">Prathamesh Shigwan</span><span class="sr-only">, home</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Main">
+          <ul>
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link" href="../about.html">About</a></li>
+            <li><a class="nav-link is-active" href="../projects.html" aria-current="page">Projects</a></li>
+            <li><a class="nav-link" href="../skills.html">Skills</a></li>
+            <li><a class="nav-link" href="../experience.html">Experience</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary btn-sm header-cta" href="../contact.html">Let’s Discuss a Project</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+            <span class="menu-icon-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span>
+            <span class="menu-icon-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M6 6l12 12M18 6 6 18"></path></svg></span>
+            <span class="sr-only" data-menu-label>Open menu</span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="container" aria-label="Menu">
+          <ul>
+            <li><a class="mobile-link" href="../index.html">Home</a></li>
+            <li><a class="mobile-link" href="../about.html">About</a></li>
+            <li><a class="mobile-link is-active" href="../projects.html" aria-current="page">Projects<span class="mobile-current">Current page</span></a></li>
+            <li><a class="mobile-link" href="../skills.html">Skills</a></li>
+            <li><a class="mobile-link" href="../experience.html">Experience</a></li>
+            <li><a class="mobile-link" href="../contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-block mobile-cta" href="../contact.html">Let’s Discuss a Project</a>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <main id="main" tabindex="-1">
+      <article>
+        <header class="container case-header">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../projects.html">Projects</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Blackmagic Videohub Controller</li>
+            </ol>
+          </nav>
+          <p class="case-meta"><span>Desktop Applications and Automation</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+          <h1 class="case-title">Blackmagic Videohub Controller</h1>
+          <p class="case-overview">A Python desktop application for controlling Blackmagic Videohub video routers. It communicates with the router over the network and gives operators a desktop interface for routing control workflows.</p><div class="case-actions">
+            <!-- When the code or a demo is public, replace the marker below with:
+                 <a class="btn btn-secondary btn-md" href="https://github.com/…" target="_blank" rel="noopener noreferrer">View code on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                 <a class="btn btn-secondary btn-md" href="https://…" target="_blank" rel="noopener noreferrer">Open live demo<span class="sr-only"> (opens in a new tab)</span></a> -->
+
+          </div>
+        </header>
+
+        <figure class="container case-figure">
+          <div class="case-visual case-visual--wide"><a class="shot shot-link" href="../images/projects/videohub-controller-1600.webp"><img src="../images/projects/videohub-controller-1600.webp" srcset="../images/projects/videohub-controller-800.webp 800w, ../images/projects/videohub-controller-1600.webp 1600w" sizes="(min-width: 76rem) 72rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the Videohub controller: a routing grid of inputs and outputs, a list of active routes, a source preview and a system log." loading="eager" fetchpriority="high" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span><span class="sr-only"> (opens the full-size image)</span></a></div>
+          <figcaption class="figure-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.75v.01"></path></svg><span>Concept illustration of the workflow, not a screenshot of the actual application.</span> </figcaption>
+        </figure>
+
+        <div class="container case-layout">
+          <div class="case-main">
+            <section class="case-block">
+              <h2>The challenge</h2>
+              <div class="case-block-body">
+                <p>A video router decides which source feeds which destination: cameras, recorders, monitors and more. Routing changes need to be quick and dependable. This tool puts routing control into a focused desktop interface that talks to the router directly over the network.</p>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>What I built</h2>
+              <div class="case-block-body">
+                <p>The desktop interface is built in Python with Tkinter / CustomTkinter. It communicates with the Videohub over the network using Python sockets and the router’s text-based control protocol (the same protocol that can be explored over Telnet), so routing actions taken in the interface are sent straight to the equipment.</p>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>Key features</h2>
+              <div class="case-block-body">
+                <ul class="feature-list">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Desktop GUI built with Tkinter / CustomTkinter</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Network-based communication with the router</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Routing control workflows</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Integration with broadcast equipment</span></li>
+                </ul>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>How it fits together</h2>
+              <div class="case-block-body">
+                <ol class="flow-steps">
+                  <li><span class="flow-index" aria-hidden="true">1</span><span>Connect to the Videohub over the network</span></li>
+                  <li><span class="flow-index" aria-hidden="true">2</span><span>Choose a source and a destination in the desktop interface</span></li>
+                  <li><span class="flow-index" aria-hidden="true">3</span><span>Send the routing change to the router</span></li>
+                </ol>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>What this demonstrates</h2>
+              <div class="case-block-body">
+                <p>Building practical desktop software that controls real hardware: network programming with sockets, working against a device’s control protocol, and wrapping it in an interface that is straightforward for operators.</p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="case-aside">
+            <section class="card" aria-labelledby="glance-title">
+              <h2 class="card-title" id="glance-title">At a glance</h2>
+              <dl class="glance-list">
+                <div>
+                  <dt>Category</dt>
+                  <dd>Desktop Applications and Automation</dd>
+                </div>
+                <div>
+                  <dt>Type of work</dt>
+                  <dd>Software I built</dd>
+                </div>
+                <div>
+                  <dt>Technologies</dt>
+                  <dd class="dd-list"><ul class="tech-list" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>Tkinter</li>
+                    <li>CustomTkinter</li>
+                    <li>Sockets</li>
+                    <li>Telnet</li>
+                    <li>Blackmagic Videohub</li>
+                  </ul></dd>
+                </div>
+              </dl>
+              <!-- To add context, insert a <div><dt>Context</dt><dd>Personal project</dd></div> row above. -->
+              <p class="card-todo"></p>
+            </section>
+            <section class="card card--raised" aria-labelledby="similar-title">
+              <h2 class="card-title" id="similar-title">Need something similar?</h2>
+              <p class="card-text">Tell me about your workflow and what you’d like to automate or build.</p>
+              <a class="btn btn-primary btn-md btn-block" href="../contact.html?type=python">Discuss Your Project</a>
+            </section>
+          </aside>
+        </div>
+
+        <nav class="container more-projects" aria-label="More projects">
+          <ul>
+            <li>
+              <a href="hyperdeck-automation-tool.html">
+                <span class="more-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Previous project</span>
+                <span class="more-title">Blackmagic HyperDeck Automation Tool</span>
+              </a>
+            </li>
+            <li>
+              <a class="more-next" href="asrunlog-processing.html">
+                <span class="more-label">Next project<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                <span class="more-title">AsRunLog Processing</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-name">Prathamesh Shigwan</p>
+          <p class="footer-headline">Software Developer | Python Automation | Systems Integration</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../experience.html">Experience</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-links">
+          <li data-config-item="github" hidden>
+            <a data-config-link="github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg>GitHub</a>
+          </li>
+          <li data-config-missing="github" hidden></li>
+          <li data-config-item="linkedin" hidden>
+            <a data-config-link="linkedin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2.25"></circle><path d="M5.75 16.25c.55-1.7 1.75-2.6 3.25-2.6s2.7.9 3.25 2.6M14.75 9.25h3.5M14.75 12.75h3.5"></path></svg>LinkedIn</a>
+          </li>
+          <li data-config-missing="linkedin" hidden></li>
+          <li data-config-item="email" hidden>
+            <a data-config-link="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span data-config-text="email"></span></a>
+          </li>
+          <li>
+            <a href="../contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 20.5 11.5Z"></path></svg>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© <span data-year>2026</span> Prathamesh Shigwan</p>
+          <p>Mumbai, India</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

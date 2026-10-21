@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Broadcast Content and Playlist Automation | Prathamesh Shigwan</title>
+    <meta name="description" content="Content preparation and media-management workflows for broadcast playout: FTP transfers, NAS and local storage, missing-file and readiness checks, and playlist preparation." />
+    <meta name="theme-color" content="#0c1015" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Link previews (WhatsApp, LinkedIn, X) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Prathamesh Shigwan" />
+    <meta property="og:title" content="Broadcast Content and Playlist Automation | Prathamesh Shigwan" />
+    <meta property="og:description" content="Content preparation and media-management workflows for broadcast playout: FTP transfers, NAS and local storage, missing-file and readiness checks, and playlist preparation." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Broadcast Content and Playlist Automation | Prathamesh Shigwan" />
+    <meta name="twitter:description" content="Content preparation and media-management workflows for broadcast playout: FTP transfers, NAS and local storage, missing-file and readiness checks, and playlist preparation." />
+    <!-- Turned on once the site is live: see README.md, "When the site is live". -->
+    <!--SITE-URL <link rel="canonical" href="https://example.com/projects/broadcast-content-playlist-automation.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:url" content="https://example.com/projects/broadcast-content-playlist-automation.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:width" content="1200" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:height" content="630" /> SITE-URL-->
+    <!--SITE-URL <meta name="twitter:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+
+    <link rel="icon" href="../images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <link rel="preload" href="../fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/ibm-plex-sans-condensed-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="../js/config.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="container header-bar">
+        <a class="brand" href="../index.html">
+          <span class="monogram" aria-hidden="true">PS<span class="monogram-dot"></span></span>
+          <span class="brand-name">Prathamesh Shigwan</span><span class="sr-only">, home</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Main">
+          <ul>
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link" href="../about.html">About</a></li>
+            <li><a class="nav-link is-active" href="../projects.html" aria-current="page">Projects</a></li>
+            <li><a class="nav-link" href="../skills.html">Skills</a></li>
+            <li><a class="nav-link" href="../experience.html">Experience</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary btn-sm header-cta" href="../contact.html">Let’s Discuss a Project</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+            <span class="menu-icon-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span>
+            <span class="menu-icon-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M6 6l12 12M18 6 6 18"></path></svg></span>
+            <span class="sr-only" data-menu-label>Open menu</span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="container" aria-label="Menu">
+          <ul>
+            <li><a class="mobile-link" href="../index.html">Home</a></li>
+            <li><a class="mobile-link" href="../about.html">About</a></li>
+            <li><a class="mobile-link is-active" href="../projects.html" aria-current="page">Projects<span class="mobile-current">Current page</span></a></li>
+            <li><a class="mobile-link" href="../skills.html">Skills</a></li>
+            <li><a class="mobile-link" href="../experience.html">Experience</a></li>
+            <li><a class="mobile-link" href="../contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-block mobile-cta" href="../contact.html">Let’s Discuss a Project</a>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <main id="main" tabindex="-1">
+      <article>
+        <header class="container case-header">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../projects.html">Projects</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Broadcast Content and Playlist Automation</li>
+            </ol>
+          </nav>
+          <p class="case-meta"><span>Workflow Automation</span><span class="kind-badge"><span class="kind-dot kind-dot--mixed" aria-hidden="true"></span>Automation and operations</span></p>
+          <h1 class="case-title">Broadcast Content and Playlist Automation</h1>
+          <p class="case-overview">Content preparation and media-management workflows that support broadcast playout operations: moving content over FTP, working across NAS and local storage, verifying that media is present and ready, and preparing and scheduling playlists.</p><div class="case-actions">
+            <!-- When the code or a demo is public, replace the marker below with:
+                 <a class="btn btn-secondary btn-md" href="https://github.com/…" target="_blank" rel="noopener noreferrer">View code on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+                 <a class="btn btn-secondary btn-md" href="https://…" target="_blank" rel="noopener noreferrer">Open live demo<span class="sr-only"> (opens in a new tab)</span></a> -->
+
+          </div>
+        </header>
+
+        <figure class="container case-figure">
+          <div class="case-visual case-visual--wide"><a class="shot shot-link" href="../images/projects/broadcast-content-playlist-automation-1600.webp"><img src="../images/projects/broadcast-content-playlist-automation-1600.webp" srcset="../images/projects/broadcast-content-playlist-automation-800.webp 800w, ../images/projects/broadcast-content-playlist-automation-1600.webp 1600w" sizes="(min-width: 76rem) 72rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the content workflow: an FTP file list with a missing file flagged, a video preview, a playlist schedule, a process log, and the steps from FTP to NAS to playout." loading="eager" fetchpriority="high" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span><span class="sr-only"> (opens the full-size image)</span></a></div>
+          <figcaption class="figure-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.75v.01"></path></svg><span>Concept illustration of the workflow, not a screenshot of the actual application.</span> </figcaption>
+        </figure>
+
+        <div class="container case-layout">
+          <div class="case-main">
+            <section class="case-block">
+              <h2>The challenge</h2>
+              <div class="case-block-body">
+                <p>A playout schedule is only as reliable as the media behind it. Content arrives from different places, has to be organised across network and local storage, and every item in a playlist must be present and ready before its slot comes up. A missing file is far easier to deal with before air than during it.</p>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>What I built</h2>
+              <div class="case-block-body">
+                <p>These workflows combine Python and file-system automation with day-to-day operational processes: FTP content transfers, NAS and local storage handling, verification of missing files, media-file readiness checks, and playlist preparation and scheduling, with Excel as part of the toolset.</p>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>Key features</h2>
+              <div class="case-block-body">
+                <ul class="feature-list">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>FTP content transfers</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>NAS and local storage workflows</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Missing-file verification</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Media-file readiness checks</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Playlist preparation and scheduling</span></li>
+                </ul>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>How it fits together</h2>
+              <div class="case-block-body">
+                <ol class="flow-steps">
+                  <li><span class="flow-index" aria-hidden="true">1</span><span>Content arrives over FTP</span></li>
+                  <li><span class="flow-index" aria-hidden="true">2</span><span>Media is organised across NAS and local storage</span></li>
+                  <li><span class="flow-index" aria-hidden="true">3</span><span>Missing files are identified and readiness is checked</span></li>
+                  <li><span class="flow-index" aria-hidden="true">4</span><span>Playlists are prepared and scheduled for playout</span></li>
+                </ol>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>What this demonstrates</h2>
+              <div class="case-block-body">
+                <p>Practical automation in service of operational reliability: making sure every file a schedule depends on is present and ready, and keeping content moving between systems in an organised, checkable way.</p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="case-aside">
+            <section class="card" aria-labelledby="glance-title">
+              <h2 class="card-title" id="glance-title">At a glance</h2>
+              <dl class="glance-list">
+                <div>
+                  <dt>Category</dt>
+                  <dd>Workflow Automation</dd>
+                </div>
+                <div>
+                  <dt>Type of work</dt>
+                  <dd>Automation and operations</dd>
+                </div>
+                <div>
+                  <dt>Technologies</dt>
+                  <dd class="dd-list"><ul class="tech-list" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>FTP</li>
+                    <li>Excel</li>
+                    <li>NAS</li>
+                    <li>File-system automation</li>
+                  </ul></dd>
+                </div>
+              </dl>
+              <!-- To add context, insert a <div><dt>Context</dt><dd>Personal project</dd></div> row above. -->
+              <p class="card-todo"></p>
+            </section>
+            <section class="card card--raised" aria-labelledby="similar-title">
+              <h2 class="card-title" id="similar-title">Need something similar?</h2>
+              <p class="card-text">Tell me about your workflow and what you’d like to automate or build.</p>
+              <a class="btn btn-primary btn-md btn-block" href="../contact.html?type=python">Discuss Your Project</a>
+            </section>
+          </aside>
+        </div>
+
+        <nav class="container more-projects" aria-label="More projects">
+          <ul>
+            <li>
+              <a href="epg-excel-to-xml.html">
+                <span class="more-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Previous project</span>
+                <span class="more-title">EPG Excel-to-XML Automation</span>
+              </a>
+            </li>
+            <li>
+              <a class="more-next" href="hyperdeck-automation-tool.html">
+                <span class="more-label">Next project<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                <span class="more-title">Blackmagic HyperDeck Automation Tool</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-name">Prathamesh Shigwan</p>
+          <p class="footer-headline">Software Developer | Python Automation | Systems Integration</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../experience.html">Experience</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-links">
+          <li data-config-item="github" hidden>
+            <a data-config-link="github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg>GitHub</a>
+          </li>
+          <li data-config-missing="github" hidden></li>
+          <li data-config-item="linkedin" hidden>
+            <a data-config-link="linkedin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2.25"></circle><path d="M5.75 16.25c.55-1.7 1.75-2.6 3.25-2.6s2.7.9 3.25 2.6M14.75 9.25h3.5M14.75 12.75h3.5"></path></svg>LinkedIn</a>
+          </li>
+          <li data-config-missing="linkedin" hidden></li>
+          <li data-config-item="email" hidden>
+            <a data-config-link="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span data-config-text="email"></span></a>
+          </li>
+          <li>
+            <a href="../contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 20.5 11.5Z"></path></svg>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© <span data-year>2026</span> Prathamesh Shigwan</p>
+          <p>Mumbai, India</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

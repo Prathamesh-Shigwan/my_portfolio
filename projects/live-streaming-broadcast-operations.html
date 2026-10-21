@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Live Streaming and Broadcast Operations | Prathamesh Shigwan</title>
+    <meta name="description" content="Hands-on operational experience supporting live broadcast and streaming workflows: event monitoring and recording, feed troubleshooting, SRT, UDP and RTMP." />
+    <meta name="theme-color" content="#0c1015" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Link previews (WhatsApp, LinkedIn, X) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Prathamesh Shigwan" />
+    <meta property="og:title" content="Live Streaming and Broadcast Operations | Prathamesh Shigwan" />
+    <meta property="og:description" content="Hands-on operational experience supporting live broadcast and streaming workflows: event monitoring and recording, feed troubleshooting, SRT, UDP and RTMP." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Live Streaming and Broadcast Operations | Prathamesh Shigwan" />
+    <meta name="twitter:description" content="Hands-on operational experience supporting live broadcast and streaming workflows: event monitoring and recording, feed troubleshooting, SRT, UDP and RTMP." />
+    <!-- Turned on once the site is live: see README.md, "When the site is live". -->
+    <!--SITE-URL <link rel="canonical" href="https://example.com/projects/live-streaming-broadcast-operations.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:url" content="https://example.com/projects/live-streaming-broadcast-operations.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:width" content="1200" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:height" content="630" /> SITE-URL-->
+    <!--SITE-URL <meta name="twitter:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+
+    <link rel="icon" href="../images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <link rel="preload" href="../fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/ibm-plex-sans-condensed-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="../js/config.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="container header-bar">
+        <a class="brand" href="../index.html">
+          <span class="monogram" aria-hidden="true">PS<span class="monogram-dot"></span></span>
+          <span class="brand-name">Prathamesh Shigwan</span><span class="sr-only">, home</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Main">
+          <ul>
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link" href="../about.html">About</a></li>
+            <li><a class="nav-link is-active" href="../projects.html" aria-current="page">Projects</a></li>
+            <li><a class="nav-link" href="../skills.html">Skills</a></li>
+            <li><a class="nav-link" href="../experience.html">Experience</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary btn-sm header-cta" href="../contact.html">Let’s Discuss a Project</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+            <span class="menu-icon-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span>
+            <span class="menu-icon-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M6 6l12 12M18 6 6 18"></path></svg></span>
+            <span class="sr-only" data-menu-label>Open menu</span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="container" aria-label="Menu">
+          <ul>
+            <li><a class="mobile-link" href="../index.html">Home</a></li>
+            <li><a class="mobile-link" href="../about.html">About</a></li>
+            <li><a class="mobile-link is-active" href="../projects.html" aria-current="page">Projects<span class="mobile-current">Current page</span></a></li>
+            <li><a class="mobile-link" href="../skills.html">Skills</a></li>
+            <li><a class="mobile-link" href="../experience.html">Experience</a></li>
+            <li><a class="mobile-link" href="../contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-block mobile-cta" href="../contact.html">Let’s Discuss a Project</a>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <main id="main" tabindex="-1">
+      <article>
+        <header class="container case-header">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../projects.html">Projects</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Live Streaming and Broadcast Operations</li>
+            </ol>
+          </nav>
+          <p class="case-meta"><span>Systems Integration</span><span class="kind-badge"><span class="kind-dot kind-dot--operations" aria-hidden="true"></span>Operational experience</span></p>
+          <h1 class="case-title">Live Streaming and Broadcast Operations</h1>
+          <p class="case-overview">Practical experience supporting live broadcast and streaming workflows. This entry describes operational work (monitoring, recording, troubleshooting and coordination) rather than software I developed.</p>
+        </header>
+
+        <figure class="container case-figure">
+          <div class="case-visual case-visual--wide"><a class="shot shot-link" href="../images/projects/live-streaming-broadcast-operations-1600.webp"><img src="../images/projects/live-streaming-broadcast-operations-1600.webp" srcset="../images/projects/live-streaming-broadcast-operations-800.webp 800w, ../images/projects/live-streaming-broadcast-operations-1600.webp 1600w" sizes="(min-width: 76rem) 72rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of a live streaming control room: programme preview, multiview, audio levels, stream status and SRT to UDP settings." loading="eager" fetchpriority="high" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span><span class="sr-only"> (opens the full-size image)</span></a></div>
+          <figcaption class="figure-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.75v.01"></path></svg><span>Illustration of a live streaming setup. The project itself is operational work, not software I developed.</span></figcaption>
+        </figure>
+
+        <div class="container case-layout">
+          <div class="case-main">
+            <p class="info-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.75v.01"></path></svg>
+              <span>Hands-on operational work, not a software product I developed. It is included because it shapes how I design tools for real workflows.</span>
+            </p>
+            <section class="case-block">
+              <h2>The challenge</h2>
+              <div class="case-block-body">
+                <p>Live workflows don’t allow retakes. Feeds arrive over different protocols, need watching end to end, and have to be fixed quickly when something goes wrong.</p>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>What I did</h2>
+              <div class="case-block-body">
+                <p>Operational support across live events and playout: monitoring and recording live events, troubleshooting stream feeds, handling SRT-to-UDP workflows, testing and coordinating RTMP streams, and monitoring playout, including live and repeat logo changes.</p>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>Key responsibilities</h2>
+              <div class="case-block-body">
+                <ul class="feature-list">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Live-event monitoring and recording</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Stream-feed troubleshooting</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>SRT-to-UDP workflow handling</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>RTMP testing and coordination</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Playout monitoring and live/repeat logo changes</span></li>
+                </ul>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>How it fits together</h2>
+              <div class="case-block-body">
+                <ol class="flow-steps">
+                  <li><span class="flow-index" aria-hidden="true">1</span><span>Feeds arrive over SRT or RTMP</span></li>
+                  <li><span class="flow-index" aria-hidden="true">2</span><span>SRT-to-UDP workflows are handled</span></li>
+                  <li><span class="flow-index" aria-hidden="true">3</span><span>Streams are monitored and live events are recorded</span></li>
+                  <li><span class="flow-index" aria-hidden="true">4</span><span>Playout is monitored, including live/repeat logo changes</span></li>
+                </ol>
+              </div>
+            </section>
+            <section class="case-block">
+              <h2>What this demonstrates</h2>
+              <div class="case-block-body">
+                <p>An operator’s understanding of how live broadcast systems behave under real conditions: context that makes it easier to design software and automation that fit real workflows.</p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="case-aside">
+            <section class="card" aria-labelledby="glance-title">
+              <h2 class="card-title" id="glance-title">At a glance</h2>
+              <dl class="glance-list">
+                <div>
+                  <dt>Category</dt>
+                  <dd>Systems Integration</dd>
+                </div>
+                <div>
+                  <dt>Type of work</dt>
+                  <dd>Operational experience</dd>
+                </div>
+                <div>
+                  <dt>Technologies</dt>
+                  <dd class="dd-list"><ul class="tech-list" aria-label="Technologies">
+                    <li>UDP</li>
+                    <li>SRT</li>
+                    <li>RTMP</li>
+                    <li>OBS</li>
+                    <li>Networking</li>
+                    <li>Broadcast systems</li>
+                  </ul></dd>
+                </div>
+              </dl>
+              <!-- To add context, insert a <div><dt>Context</dt><dd>Personal project</dd></div> row above. -->
+              <p class="card-todo"></p>
+            </section>
+            <section class="card card--raised" aria-labelledby="similar-title">
+              <h2 class="card-title" id="similar-title">Need something similar?</h2>
+              <p class="card-text">Tell me about your workflow and what you’d like to automate or build.</p>
+              <a class="btn btn-primary btn-md btn-block" href="../contact.html?type=other">Discuss Your Project</a>
+            </section>
+          </aside>
+        </div>
+
+        <nav class="container more-projects" aria-label="More projects">
+          <ul>
+            <li>
+              <a href="tally-led-control-system.html">
+                <span class="more-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Previous project</span>
+                <span class="more-title">Broadcast Tally and LED Control System</span>
+              </a>
+            </li>
+            <li>
+              <a class="more-next" href="django-ecommerce-platform.html">
+                <span class="more-label">Next project<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+                <span class="more-title">Django E-commerce Platform</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-name">Prathamesh Shigwan</p>
+          <p class="footer-headline">Software Developer | Python Automation | Systems Integration</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../experience.html">Experience</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-links">
+          <li data-config-item="github" hidden>
+            <a data-config-link="github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg>GitHub</a>
+          </li>
+          <li data-config-missing="github" hidden></li>
+          <li data-config-item="linkedin" hidden>
+            <a data-config-link="linkedin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2.25"></circle><path d="M5.75 16.25c.55-1.7 1.75-2.6 3.25-2.6s2.7.9 3.25 2.6M14.75 9.25h3.5M14.75 12.75h3.5"></path></svg>LinkedIn</a>
+          </li>
+          <li data-config-missing="linkedin" hidden></li>
+          <li data-config-item="email" hidden>
+            <a data-config-link="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span data-config-text="email"></span></a>
+          </li>
+          <li>
+            <a href="../contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 20.5 11.5Z"></path></svg>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© <span data-year>2026</span> Prathamesh Shigwan</p>
+          <p>Mumbai, India</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

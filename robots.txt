@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# When the site is live, replace example.com and remove the "# " below (see README.md).
+# Sitemap: https://example.com/sitemap.xml

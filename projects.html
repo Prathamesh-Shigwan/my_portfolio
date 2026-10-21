@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Projects | Prathamesh Shigwan</title>
+    <meta name="description" content="Real projects by Prathamesh Shigwan: a Django e-commerce platform, Python automation for broadcast workflows, desktop tools for Blackmagic equipment, and more." />
+    <meta name="theme-color" content="#0c1015" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Link previews (WhatsApp, LinkedIn, X) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Prathamesh Shigwan" />
+    <meta property="og:title" content="Projects | Prathamesh Shigwan" />
+    <meta property="og:description" content="Real projects by Prathamesh Shigwan: a Django e-commerce platform, Python automation for broadcast workflows, desktop tools for Blackmagic equipment, and more." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects | Prathamesh Shigwan" />
+    <meta name="twitter:description" content="Real projects by Prathamesh Shigwan: a Django e-commerce platform, Python automation for broadcast workflows, desktop tools for Blackmagic equipment, and more." />
+    <!-- Turned on once the site is live: see README.md, "When the site is live". -->
+    <!--SITE-URL <link rel="canonical" href="https://example.com/projects.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:url" content="https://example.com/projects.html" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:width" content="1200" /> SITE-URL-->
+    <!--SITE-URL <meta property="og:image:height" content="630" /> SITE-URL-->
+    <!--SITE-URL <meta name="twitter:image" content="https://example.com/images/og-image.png" /> SITE-URL-->
+
+    <link rel="icon" href="images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="preload" href="fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/ibm-plex-sans-condensed-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/config.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="container header-bar">
+        <a class="brand" href="index.html">
+          <span class="monogram" aria-hidden="true">PS<span class="monogram-dot"></span></span>
+          <span class="brand-name">Prathamesh Shigwan</span><span class="sr-only">, home</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Main">
+          <ul>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link is-active" href="projects.html" aria-current="page">Projects</a></li>
+            <li><a class="nav-link" href="skills.html">Skills</a></li>
+            <li><a class="nav-link" href="experience.html">Experience</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let’s Discuss a Project</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+            <span class="menu-icon-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span>
+            <span class="menu-icon-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M6 6l12 12M18 6 6 18"></path></svg></span>
+            <span class="sr-only" data-menu-label>Open menu</span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="container" aria-label="Menu">
+          <ul>
+            <li><a class="mobile-link" href="index.html">Home</a></li>
+            <li><a class="mobile-link" href="about.html">About</a></li>
+            <li><a class="mobile-link is-active" href="projects.html" aria-current="page">Projects<span class="mobile-current">Current page</span></a></li>
+            <li><a class="mobile-link" href="skills.html">Skills</a></li>
+            <li><a class="mobile-link" href="experience.html">Experience</a></li>
+            <li><a class="mobile-link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-block mobile-cta" href="contact.html">Let’s Discuss a Project</a>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <main id="main" tabindex="-1">
+      <header class="page-header">
+        <div class="page-header-grid" aria-hidden="true"></div>
+        <div class="container page-header-inner">
+          <h1 class="page-title">Projects</h1>
+          <p class="page-lead">Software I’ve built and systems I’ve worked on, from a Django e-commerce platform to Python automation and broadcast engineering.</p>
+        </div>
+      </header>
+
+      <section class="container filters-section" aria-labelledby="filter-title">
+        <h2 class="sr-only" id="filter-title">Filter projects</h2>
+        <div class="filter-group js-only" role="group" aria-label="Filter projects by category">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true" aria-label="All Projects, 8 projects">All Projects<span class="filter-count" aria-hidden="true">8</span></button>
+          <button class="filter-chip" type="button" data-filter="web" aria-pressed="false" aria-label="Web Development, 1 project">Web Development<span class="filter-count" aria-hidden="true">1</span></button>
+          <button class="filter-chip" type="button" data-filter="python" aria-pressed="false" aria-label="Python Automation, 5 projects">Python Automation<span class="filter-count" aria-hidden="true">5</span></button>
+          <button class="filter-chip" type="button" data-filter="desktop" aria-pressed="false" aria-label="Desktop Applications, 2 projects">Desktop Applications<span class="filter-count" aria-hidden="true">2</span></button>
+          <button class="filter-chip" type="button" data-filter="broadcast" aria-pressed="false" aria-label="Broadcast Engineering, 7 projects">Broadcast Engineering<span class="filter-count" aria-hidden="true">7</span></button>
+          <button class="filter-chip" type="button" data-filter="data" aria-pressed="false" aria-label="Data Processing, 2 projects">Data Processing<span class="filter-count" aria-hidden="true">2</span></button>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="kind-dot kind-dot--built" aria-hidden="true"></span><span><span class="legend-label">Software I built:</span> Software I designed and developed.</span></span>
+          <span class="legend-item"><span class="kind-dot kind-dot--mixed" aria-hidden="true"></span><span><span class="legend-label">Automation and operations:</span> Automation combined with hands-on operational work.</span></span>
+          <span class="legend-item"><span class="kind-dot kind-dot--operations" aria-hidden="true"></span><span><span class="legend-label">Operational experience:</span> Hands-on operational work, not a software product I developed.</span></span>
+        </div>
+        <p class="sr-only" aria-live="polite" data-filter-status></p>
+      </section>
+
+      <section class="container project-list-section" aria-label="Project list">
+        <ol class="project-list" data-project-list>
+          <li class="project-row" data-filters="web">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/django-ecommerce-platform-1600.webp" srcset="images/projects/django-ecommerce-platform-800.webp 800w, images/projects/django-ecommerce-platform-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of an online clothing store: storefront on desktop and phone, product page, cart, checkout with Razorpay and Blue Dart, and an admin product list." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Web Development</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+                <h2 class="project-row-title">Django E-commerce Platform</h2>
+                <p class="project-row-summary">A Django e-commerce application covering the whole order lifecycle: product variants, inventory, cart and Razorpay checkout, through to Blue Dart shipping, returns and replacements.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>Django</li>
+                  <li>SQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li class="tech-more">and 5 more</li>
+                </ul>
+                <a class="project-row-link" href="projects/django-ecommerce-platform.html">View Details<span class="sr-only">: Django E-commerce Platform</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="python data broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/epg-excel-to-xml-1600.webp" srcset="images/projects/epg-excel-to-xml-800.webp 800w, images/projects/epg-excel-to-xml-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the EPG workflow: an Excel schedule, column mapping, validation results, a generated XML preview and FTP upload settings." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Data Processing Automation</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+                <h2 class="project-row-title">EPG Excel-to-XML Automation</h2>
+                <p class="project-row-summary">Python automation that turns broadcaster programme schedules from Excel into structured XML, with ID, date, time and thumbnail checks, ready for FTP ingestion.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>Excel</li>
+                  <li>XML</li>
+                  <li>File processing</li>
+                </ul>
+                <a class="project-row-link" href="projects/epg-excel-to-xml.html">View Details<span class="sr-only">: EPG Excel-to-XML Automation</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="python broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/broadcast-content-playlist-automation-1600.webp" srcset="images/projects/broadcast-content-playlist-automation-800.webp 800w, images/projects/broadcast-content-playlist-automation-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the content workflow: an FTP file list with a missing file flagged, a video preview, a playlist schedule, a process log, and the steps from FTP to NAS to playout." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Workflow Automation</span><span class="kind-badge"><span class="kind-dot kind-dot--mixed" aria-hidden="true"></span>Automation and operations</span></p>
+                <h2 class="project-row-title">Broadcast Content and Playlist Automation</h2>
+                <p class="project-row-summary">Content preparation and media-management workflows for broadcast playout: FTP transfers, NAS and local storage, missing-file and readiness checks, and playlist preparation.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>FTP</li>
+                  <li>Excel</li>
+                  <li>NAS</li>
+                  <li>File-system automation</li>
+                </ul>
+                <a class="project-row-link" href="projects/broadcast-content-playlist-automation.html">View Details<span class="sr-only">: Broadcast Content and Playlist Automation</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="desktop python broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/hyperdeck-automation-tool-1600.webp" srcset="images/projects/hyperdeck-automation-tool-800.webp 800w, images/projects/hyperdeck-automation-tool-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the HyperDeck tool: recorder controls, a media file list pairing each .mov with its .mcc file, and a system log, beside a HyperDeck recorder." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Broadcast Automation</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+                <h2 class="project-row-title">Blackmagic HyperDeck Automation Tool</h2>
+                <p class="project-row-summary">A Python desktop tool for Blackmagic HyperDeck recorders that pairs recorder-control workflows with media-file readiness checks.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>Tkinter</li>
+                  <li>Networking</li>
+                  <li>Telnet</li>
+                  <li>Blackmagic HyperDeck</li>
+                </ul>
+                <a class="project-row-link" href="projects/hyperdeck-automation-tool.html">View Details<span class="sr-only">: Blackmagic HyperDeck Automation Tool</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="desktop python broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/videohub-controller-1600.webp" srcset="images/projects/videohub-controller-800.webp 800w, images/projects/videohub-controller-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the Videohub controller: a routing grid of inputs and outputs, a list of active routes, a source preview and a system log." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Desktop Applications and Automation</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+                <h2 class="project-row-title">Blackmagic Videohub Controller</h2>
+                <p class="project-row-summary">A Python desktop application for controlling Blackmagic Videohub routing equipment over the network.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>Tkinter</li>
+                  <li>CustomTkinter</li>
+                  <li>Sockets</li>
+                  <li>Telnet</li>
+                  <li class="tech-more">and 1 more</li>
+                </ul>
+                <a class="project-row-link" href="projects/videohub-controller.html">View Details<span class="sr-only">: Blackmagic Videohub Controller</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="data python broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/asrunlog-processing-1600.webp" srcset="images/projects/asrunlog-processing-800.webp 800w, images/projects/asrunlog-processing-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of as-run log processing: a list of log files, a parsed preview, validation checks, and the steps from log files to HDFS." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Data Engineering</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+                <h2 class="project-row-title">AsRunLog Processing</h2>
+                <p class="project-row-summary">Processing broadcast transmission (as-run) logs into structured data for downstream systems, with workflow support for HDFS ingestion.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>Log processing</li>
+                  <li>HDFS</li>
+                </ul>
+                <a class="project-row-link" href="projects/asrunlog-processing.html">View Details<span class="sr-only">: AsRunLog Processing</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/tally-led-control-system-1600.webp" srcset="images/projects/tally-led-control-system-800.webp 800w, images/projects/tally-led-control-system-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of the tally system: camera previews marked on air or preview, a grid of LED output states, LED settings, and a hardware layout from video switcher to Raspberry Pi to LED strips." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Hardware Integration</span><span class="kind-badge"><span class="kind-dot kind-dot--built" aria-hidden="true"></span>Software I built</span></p>
+                <h2 class="project-row-title">Broadcast Tally and LED Control System</h2>
+                <p class="project-row-summary">A tally indication system that brings broadcast control signals to WS2812B addressable LEDs, combining TSL protocol work with Arduino, FastLED and Raspberry Pi.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>Python</li>
+                  <li>TSL</li>
+                  <li>FastLED</li>
+                  <li>WS2812B</li>
+                  <li>Arduino</li>
+                  <li class="tech-more">and 1 more</li>
+                </ul>
+                <a class="project-row-link" href="projects/tally-led-control-system.html">View Details<span class="sr-only">: Broadcast Tally and LED Control System</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="project-row" data-filters="broadcast">
+            <div class="project-row-inner">
+              <div class="project-row-visual"><div class="shot"><img src="images/projects/live-streaming-broadcast-operations-1600.webp" srcset="images/projects/live-streaming-broadcast-operations-800.webp 800w, images/projects/live-streaming-broadcast-operations-1600.webp 1600w" sizes="(min-width: 48rem) 15rem, calc(100vw - 2.5rem)" width="1600" height="900" alt="Illustration of a live streaming control room: programme preview, multiview, audio levels, stream status and SRT to UDP settings." loading="lazy" decoding="async" /><span class="shot-label">Illustration, not a screenshot</span></div></div>
+              <div class="project-row-body">
+                <p class="project-meta"><span>Systems Integration</span><span class="kind-badge"><span class="kind-dot kind-dot--operations" aria-hidden="true"></span>Operational experience</span></p>
+                <h2 class="project-row-title">Live Streaming and Broadcast Operations</h2>
+                <p class="project-row-summary">Hands-on operational experience supporting live broadcast and streaming workflows: event monitoring and recording, feed troubleshooting, SRT, UDP and RTMP.</p>
+                <ul class="tech-list" aria-label="Technologies">
+                  <li>UDP</li>
+                  <li>SRT</li>
+                  <li>RTMP</li>
+                  <li>OBS</li>
+                  <li>Networking</li>
+                  <li class="tech-more">and 1 more</li>
+                </ul>
+                <a class="project-row-link" href="projects/live-streaming-broadcast-operations.html">View Details<span class="sr-only">: Live Streaming and Broadcast Operations</span></a>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <p class="empty-filter" data-filter-empty hidden>No projects in this category yet.</p>
+      </section>
+
+      <section class="container section" aria-labelledby="cta-title">
+        <div class="cta-band">
+          <div class="cta-grid" aria-hidden="true"></div>
+          <div class="cta-content">
+            <h2 class="section-title" id="cta-title">Have a Project in Mind?</h2>
+            <p class="cta-text">Tell me what you want to build or automate. Let’s discuss a practical solution for your business.</p>
+            <div class="button-row">
+              <a class="btn btn-primary btn-lg" href="contact.html">Discuss Your Project</a>
+              <a class="btn btn-secondary btn-lg" data-config-link="whatsapp" hidden>Message on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-name">Prathamesh Shigwan</p>
+          <p class="footer-headline">Software Developer | Python Automation | Systems Integration</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-links">
+          <li data-config-item="github" hidden>
+            <a data-config-link="github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg>GitHub</a>
+          </li>
+          <li data-config-missing="github" hidden></li>
+          <li data-config-item="linkedin" hidden>
+            <a data-config-link="linkedin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2.25"></circle><path d="M5.75 16.25c.55-1.7 1.75-2.6 3.25-2.6s2.7.9 3.25 2.6M14.75 9.25h3.5M14.75 12.75h3.5"></path></svg>LinkedIn</a>
+          </li>
+          <li data-config-missing="linkedin" hidden></li>
+          <li data-config-item="email" hidden>
+            <a data-config-link="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span data-config-text="email"></span></a>
+          </li>
+          <li>
+            <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="icon"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 20.5 11.5Z"></path></svg>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© <span data-year>2026</span> Prathamesh Shigwan</p>
+          <p>Mumbai, India</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

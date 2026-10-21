@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace example.com with your address (see README.md). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/about.html</loc></url>
+  <url><loc>https://example.com/projects.html</loc></url>
+  <url><loc>https://example.com/skills.html</loc></url>
+  <url><loc>https://example.com/experience.html</loc></url>
+  <url><loc>https://example.com/contact.html</loc></url>
+  <url><loc>https://example.com/projects/django-ecommerce-platform.html</loc></url>
+  <url><loc>https://example.com/projects/epg-excel-to-xml.html</loc></url>
+  <url><loc>https://example.com/projects/broadcast-content-playlist-automation.html</loc></url>
+  <url><loc>https://example.com/projects/hyperdeck-automation-tool.html</loc></url>
+  <url><loc>https://example.com/projects/videohub-controller.html</loc></url>
+  <url><loc>https://example.com/projects/asrunlog-processing.html</loc></url>
+  <url><loc>https://example.com/projects/tally-led-control-system.html</loc></url>
+  <url><loc>https://example.com/projects/live-streaming-broadcast-operations.html</loc></url>
+</urlset>
